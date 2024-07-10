@@ -8,7 +8,7 @@
     </entity>
     <entity name="Recipe" representedClassName="Recipe" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="ingredients" optional="YES" attributeType="String"/>
+        <attribute name="ingredients" optional="YES" attributeType="Transformable"/>
         <attribute name="instructions" optional="YES" attributeType="String"/>
         <attribute name="recipeDescription" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
