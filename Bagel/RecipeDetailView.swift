@@ -9,6 +9,8 @@ import SwiftUI
 import CoreData
 
 struct RecipeDetailView: View {
+    @Environment(\.managedObjectContext) private var viewContext
+    @State private var showingEditView = false
     var recipe: FetchedResults<Recipe>.Element
 
     var body: some View {
@@ -24,11 +26,14 @@ struct RecipeDetailView: View {
         .toolbar {
             ToolbarItem(placement: .automatic) {
                 Button(action: {
-                    checkIngredients()
+                    showingEditView = true
                 }) {
-                    Text("Check Ingredients")
+                    Text("Edit")
                 }
             }
+        }
+        .sheet(isPresented: $showingEditView) {
+            RecipeEditView(recipe: recipe)
         }
     }
     
@@ -36,4 +41,3 @@ struct RecipeDetailView: View {
         // TODO: Check ingredients action
     }
 }
-

@@ -17,6 +17,8 @@ struct RecipeListView: View {
     private var recipes: FetchedResults<Recipe>
     
     @Environment(\.managedObjectContext) private var viewContext
+    @State private var showingEditView = false
+    @State private var newRecipe = Recipe(context: PersistenceController.shared.container.viewContext)
 
     var body: some View {
         NavigationView {
@@ -32,25 +34,21 @@ struct RecipeListView: View {
             .toolbar {
                 ToolbarItem(placement: .automatic) {
                     Button(action: {
-                        addRecipe()
+                        newRecipe = Recipe(context: viewContext)
+                        newRecipe.id = UUID()
+                        newRecipe.title = ""
+                        newRecipe.recipeDescription = ""
+                        newRecipe.ingredients = [] as NSArray
+                        newRecipe.instructions = ""
+                        showingEditView = true
                     }) {
                         Image(systemName: "plus")
                     }
                 }
             }
-        }
-    }
-    
-    private func addRecipe() {
-        withAnimation {
-            let newRecipe = Recipe(context: viewContext)
-            newRecipe.id = UUID()
-            newRecipe.title = "New Recipe"
-            newRecipe.recipeDescription = ""
-            newRecipe.ingredients = [] as NSArray
-            newRecipe.instructions = ""
-            
-            saveContext()
+            .sheet(isPresented: $showingEditView) {
+                RecipeEditView(recipe: newRecipe)
+            }
         }
     }
     

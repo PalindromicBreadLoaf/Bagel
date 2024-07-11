@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		069988172C3ED9AA004FFD2B /* BagelModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 069988152C3ED9AA004FFD2B /* BagelModel.xcdatamodeld */; };
+		069988272C3EE563004FFD2B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 069988262C3EE549004FFD2B /* README.md */; };
+		069988292C3EE74C004FFD2B /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 069988282C3EE73F004FFD2B /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,8 @@
 		069987F82C3ECBBD004FFD2B /* BagelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BagelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		069988022C3ECBBD004FFD2B /* BagelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BagelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		069988162C3ED9AA004FFD2B /* BagelModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BagelModel.xcdatamodel; sourceTree = "<group>"; };
+		069988262C3EE549004FFD2B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		069988282C3EE73F004FFD2B /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -68,6 +72,8 @@
 		069987DE2C3ECBBC004FFD2B = {
 			isa = PBXGroup;
 			children = (
+				069988282C3EE73F004FFD2B /* LICENSE */,
+				069988262C3EE549004FFD2B /* README.md */,
 				069988152C3ED9AA004FFD2B /* BagelModel.xcdatamodeld */,
 				069987E92C3ECBBC004FFD2B /* Bagel */,
 				069987FB2C3ECBBD004FFD2B /* BagelTests */,
@@ -205,6 +211,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				069988272C3EE563004FFD2B /* README.md in Resources */,
+				069988292C3EE74C004FFD2B /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
